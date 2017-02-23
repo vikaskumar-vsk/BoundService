@@ -23,28 +23,14 @@ public class MyService extends Service {
         return buckysBinder;
     }
 
-    public String getCurrentTime(){
+    public String getCurrentTime() {
         SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss", Locale.US);
         return (df.format(new Date()));
     }
 
     public class MyLocalBinder extends Binder {
-        MyService getService(){
+        MyService getService() {
             return MyService.this;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

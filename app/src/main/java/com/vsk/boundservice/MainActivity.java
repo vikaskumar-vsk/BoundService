@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         //action to be taken when the service gets connected
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            MyLocalBinder binder = (MyLocalBinder) service;
+            MyLocalBinder binder = (MyLocalBinder) iBinder;
             buckysService = binder.getService();
             isBound = true;
         }
